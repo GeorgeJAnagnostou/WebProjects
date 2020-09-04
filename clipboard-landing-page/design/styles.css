@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::before,
+*::after{
+    content: '';
+    display: block;
+}
+
+html,
+body{
+    font-size: 16px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    width: 100%;
+    height: 100%;
+}
+
+:root{
+    --h-color: hsl(210, 10%, 33%);
+    --p-color: hsl(201, 11%, 66%);
+    --mobile-width: 310px;
+    --desktop-width: 660px;
+}
+h1,h2,h3,h4{
+    color: var(--h-color);
+}
+p{
+    color: var(--p-color);
+    line-height: 1.5em;
+    margin:  15px auto;
+}
+
+/* -----header----- */
+.header-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url(/WebProjects/clipboard-landing-page/images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.header-logo{
+    margin: 80px 0 40px;
+}
+.header-logo img{
+    width: 120px;
+}
+.header-text h1{
+    width: var(--mobile-width);
+    font-size: 30px;
+}
+.header-text p{
+    width: var(--mobile-width);
+}
+.download-buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button:nth-child(1){
+    width: var(--mobile-width);
+    background-color: hsl(171, 66%, 44%); 
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 3px hsl(171, 66%, 40%);
+    font-size: 18px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    cursor: pointer;
+}
+button:nth-child(2){
+    width: var(--mobile-width);
+    background-color: hsl(233, 100%, 69%);
+    color: white;
+    padding: 15px;
+    margin: 10px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 3px hsl(233, 100%, 66%);
+    font-size: 18px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    cursor: pointer;
+}
+
+/* -----snippets----- */
+.snippets-card{
+    text-align: center;
+    width: var(--mobile-width);
+    margin: auto;
+}
+
+/* -----features----- */
+.features-card{
+    width: var(--mobile-width);
+    text-align: center;
+    margin: 60px auto;
+}
+.feature{
+    margin: 50px auto;
+}
+.features-img-container img{
+    width: var(--mobile-width);
+}
+
+/* -----access----- */
+.access-card{
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+.access-card p{
+    width: var(--mobile-width);
+}
+.access-card img{
+    width: 340px;
+    margin: 40px 0 0;
+}
+
+/* -----workflow----- */
+.workflow-card{
+    text-align: center;
+}
+.workflow-title{
+    width: 270px;
+    margin: 30px auto;
+}
+.tile{
+    width: var(--mobile-width);
+    margin: 60px auto;
+}
+.tile h2{
+    margin-top: 40px;
+}
+
+/* -----sponsor logos----- */
+.sponsor-logos{
+    display: flex;
+    flex-direction: column;
+}
+.sponsor-logos img{
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+/* -----download----- */
+.download-card{
+    text-align: center;
+}
+.download-card h2{
+    width: 300px;
+    margin: auto;
+}
+.download-card p{
+    width: 300px;
+    margin: auto;
+}
+
+/* -----footer----- */
+footer{
+    background-color: hsl(0, 0%, 94%);
+    text-align: center;
+}
+.footer-logo img{
+    height: 70px;
+    margin: 50px 0 30px;
+}
+.links-grid p{
+    width: fit-content;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+.links-grid p:hover{
+    color: hsl(171, 66%, 44%);
+    cursor: pointer;
+}
+.social-links img{
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.social-links img:hover{
+    cursor: pointer;
+}
+
+/* -----spacer----- */
+.spacer{
+    display: block;
+    height: 100px;
+    width: 100%;
+}
+
+/* -----desktop adjustments----- */
+@media screen and (min-width: 800px){
+    body{
+        font-size: 18px;
+    }
+    .header-card{
+        background-image: url(/WebProjects/clipboard-landing-page/images/bg-header-desktop.png);
+    }
+    .header-text h1{ 
+        width: var(--desktop-width);
+        font-size: 38px;
+    }
+    .header-text p{
+        width: var(--desktop-width)
+    }
+    .download-buttons{
+        flex-direction: row;
+    }
+    button:nth-child(1){
+        width: 200px;
+        font-size: 16px;
+        padding: 12px;
+    }   
+    button:nth-child(2){
+        width: 200px;
+        font-size: 16px;
+        padding: 12px;
+    }
+    .snippets-card{
+        width: var(--desktop-width);
+    }
+    .features-card{
+        width: 100%;
+        display: flex;
+        text-align: left;
+        position: relative;
+    }
+    .features-img-container{
+        width: fit-content;
+        margin-right: 5%;
+    }
+    .features-img-container img{
+        width: 100%;
+        position: relative;
+        left: -50px;
+    }
+    .feature{
+        width: 400px;
+        padding-right: 20px;
+    }
+    .access-card{
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+    .access-card p{
+        width: var(--desktop-width);
+    }
+    .access-card img{
+        width: 60%;
+        margin: 40px 0 0;
+    }
+    .workflow-title{
+        width: var(--desktop-width);
+    }
+    .workflow-tiles{
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+    }
+    .tile{
+        width: 410px;
+        padding: 0 10px;
+    }
+    .sponsor-logos{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .sponsor-logos img{
+        margin: auto;
+        transform: scale(1.1 , 1.1);
+    }
+    .download-card h2{
+        width: var(--desktop-width);
+        margin: 50px auto 0;
+    }
+    .download-card p{
+        width: var(--desktop-width);
+        margin: 20px auto;
+    }
+    footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .footer-logo img{
+        height: 50px;
+        margin: 30px auto;
+    }
+    .links-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr,);
+        grid-column-gap: 40px;
+    }
+    .col-1{
+        grid-column: 1/2;
+    }
+    .col-2{
+        grid-column: 2/3;
+    }
+    .col-3{
+        grid-column: 3/4;
+    }
+    .links-grid p{
+        font-size: 16px;
+        margin: 10px;
+    }
+    .social-links img{
+        margin-bottom: 0;
+    }
+}
