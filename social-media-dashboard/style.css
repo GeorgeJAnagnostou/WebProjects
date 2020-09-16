@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: fit-content;
+    width: 100%;
+    background-color: var(--light-theme-main-bg);
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+    --positive-change: hsl(163, 72%, 41%);
+    --negative-change: hsl(356, 69%, 56%);
+    --facebook-color: hsl(208, 92%, 53%);
+    --twitter-color: hsl(203, 89%, 53%);
+    --youtube-color: hsl(348, 97%, 39%);
+    --instagram-gradiant: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+
+    /* dark theme */
+    --dark-theme-slider-gradient: linear-gradient(to top right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    --dark-theme-bg: hsl(230, 17%, 14%);
+    --dark-theme-dark-bg: hsl(232, 19%, 15%);
+    --dark-theme-card-bg: hsl(228, 28%, 20%);
+    --dark-theme-light-text: hsl(0, 0%, 100%);
+    --dark-theme-dark-text: hsl(228, 34%, 66%);
+
+
+    /* light theme */
+    --light-theme-slider-bg: hsl(230, 22%, 74%);
+    --light-theme-main-bg: hsl(0, 0%, 100%);
+    --light-theme-card-bg: hsl(227, 47%, 96%);
+    --light-theme-light-text: hsl(228, 12%, 44%);
+    --light-theme-dark-text: hsl(230, 17%, 14%);
+}
+
+/* ---------------
+------header------
+------------------ */
+.header-top {
+    padding: 10% 5% 5%;
+}
+
+hr {
+    width: 90%;
+    margin: auto;
+    border-top: 1px solid var(--light-theme-light-text);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.dashboard-title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: var(--light-theme-dark-text)
+}
+
+.total-followers {
+    margin-top: 5px;
+}
+
+.title-subtext {
+    color: var(--light-theme-light-text);
+    font-weight: bold;
+}
+
+.header-bottom {
+    padding: 5%;
+    display: flex;
+}
+
+.dark-mode-slider {
+    position: absolute;
+    height: 28px;
+    width: 60px;
+    right: 5%;
+    background: var(--light-theme-slider-bg);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.slider-thumb {
+    height: 22px;
+    width: 22px;
+    position: absolute;
+    right: 4px;
+    top: 3px;
+    background-color: var(--light-theme-main-bg);
+    border-radius: 50%;
+}
+
+/* --------------------
+------media-tiles------
+----------------------- */
+.media-tiles-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.media-tile {
+    width: 90%;
+    max-width: 330px;
+    height: 220px;
+    background-color: var(--light-theme-card-bg);
+    border-radius: 5px;
+    margin: 5% auto 2%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.media-account {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--light-theme-light-text);
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.media-followers {
+    font-size: 3.5rem;
+    color: var(--light-theme-dark-text)
+}
+
+.follower-num-subtext {
+    color: var(--light-theme-light-text);
+    letter-spacing: 5px;
+    font-size: .8rem;
+    text-transform: uppercase;
+}
+
+.follower-change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.follower-change-counter {
+    display: inline;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+.media-1 {
+    border-top: 5px solid var(--facebook-color);
+}
+
+.media-2 {
+    border-top: 5px solid var(--twitter-color);
+}
+
+.media-3::before {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    margin-top: -25px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-image: var(--instagram-gradiant);
+}
+
+.media-4 {
+    border-top: 5px solid var(--youtube-color);
+}
+
+/* -----------------
+------overview------
+-------------------- */
+.overview-container {
+    width: 90%;
+    margin: 5% auto 0;
+    padding-bottom: 50px;
+}
+
+.overview-title {
+    width: 100%;
+    padding: 5% 1%;
+    color: var(--light-theme-light-text);
+}
+
+.overview-tiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.stats-tile {
+    background: var(--light-theme-card-bg);
+    width: 330px;
+    height: 120px;
+    margin: auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7%;
+}
+
+.stat-left p {
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: var(--light-theme-light-text);
+}
+
+.stat-left h1 {
+    font-size: 2rem;
+    color: var(--light-theme-dark-text);
+}
+
+.stat-right {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.stat-left {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.stat-right>img {
+    margin-bottom: 25px;
+    width: 20px;
+    height: auto;
+}
+
+.percentage-change {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.percentage-change p {
+    display: inline;
+    font-weight: bold;
+    font-size: .8rem;
+}
+
+#icon-up+p {
+    color: var(--positive-change);
+}
+
+#icon-down+p {
+    color: var(--negative-change);
+}
+
+@media screen and (min-width: 800px) {
+
+    /* ---------------
+    ------header------
+    ------------------ */
+    header {
+        display: flex;
+    }
+
+    .header-top {
+        padding: 3% 5%;
+    }
+
+    .dashboard-title {
+        font-size: 1.8rem;
+    }
+
+    .header-bottom {
+        position: absolute;
+        right: 5%;
+        padding: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .dark-mode-slider {
+        position: relative;
+        right: 0;
+    }
+
+    hr {
+        display: none;
+    }
+
+    /* --------------------
+    ------media-tiles------
+    ----------------------- */
+    .media-tiles-container {
+        margin: 2%;
+        justify-content: center;
+    }
+
+    .media-tile {
+        max-width: 305px;
+        margin: 0 1% 2%;
+    }
+
+    /* -----------------
+    ------overview------
+    -------------------- */
+    .overview-container {
+        width: 92%;
+        margin: auto;
+        padding-bottom: 75px;
+    }
+
+    .overview-title {
+        width: 100%;
+        padding: 0 0 2%;
+    }
+
+    .overview-tiles-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .stats-tile {
+        width: 300px;
+        height: auto;
+        margin: auto;
+        padding: 2%;
+    }
+
+    .stat-right>img {
+        width: 25px;
+    }
+}
