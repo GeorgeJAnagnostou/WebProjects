@@ -180,13 +180,13 @@ hr {
 ------overview------
 -------------------- */
 .overview-container {
-    width: 90%;
+    width: 100%;
     margin: 5% auto 0;
     padding-bottom: 50px;
 }
 
 .overview-title {
-    width: 100%;
+    width: 85%;
     padding: 5% 1%;
     color: var(--light-theme-light-text);
 }
@@ -194,6 +194,8 @@ hr {
 .overview-tiles-container {
     display: flex;
     flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
     gap: 20px;
 }
 
