@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" type="text/css" rel="stylesheet">
+    <script src="./script.js" type="text/javascript" defer></script>
+    <title>To-Do List</title>
+</head>
+
+<body>
+    <header class="center">
+        <div class="spacer"></div>
+        <h1>To-Do List Maker</h1>
+        <p>Enter a task you want to do today</p>
+        <p>Press enter or click the "Add" button to log your entry</p>
+        <p>To mark a task as complete, click on it.</p>
+        <p>To delete a task, click the "X".</p>
+    </header>
+    <section class="center">
+        <label for="userInput" class="input-label">You have more than 5 active tasks. Consider completing some.</label>
+        <input id="userInput" type="text" placeholder="Enter your task...">
+        <button id="enter-button">Add</button>
+        <ul id="task-list">
+            <h3>Today's Tasks:</h3>
+        </ul>
+    </section>
+</body>
+
+</html>

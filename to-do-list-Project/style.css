@@ -1,0 +1,103 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightblue;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.center {
+    width: 400px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.spacer{
+    height: 50px;
+}
+
+p {
+    margin: 20px 0;
+}
+
+/* #task-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+} */
+
+li {
+    list-style: none;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.315);
+    text-align: center;
+    padding: 2px;
+    padding-left: 5px;
+    margin: 10px auto;
+    width: 95%;
+
+    display: flex;
+    justify-content: space-between;
+    transition: all .2s ease-in-out;
+}
+
+li button {
+    margin-right: 5px;
+    padding: 0 5px;
+    border: none;
+    background-color: inherit;
+}
+
+#userInput {
+    width: 85%;
+    padding: 5px;
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#enter-button {
+    width: fit-content;
+    padding: 5px;
+    margin: 5px;
+}
+
+li:nth-child(1n) {
+    background-color: rgb(233, 233, 233);
+    transition: all .2s ease-in-out;
+}
+
+li:nth-child(2n) {
+    background-color: rgb(197, 197, 197);
+    transition: all .2s ease-in-out;
+}
+
+li:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.delete {
+    display: none;
+}
+
+.crossout {
+    text-decoration: line-through;
+    background-color: rgb(164, 255, 137) !important;
+}
+
+.input-label{
+    color: rgb(253, 90, 90);
+    background-color: white;
+    font-size: 12px;
+    border-radius: 1px;
+    padding: 3px;
+    position: absolute;
+    margin-top: 5px;
+    visibility: hidden;
+    transition: all .5s ease;
+}
