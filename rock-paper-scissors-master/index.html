@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./styles.css" type="text/css">
+  <script src="./script.js" defer></script>
+
+  <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+  <main id="main">
+
+    <!-- GAME MODE SELECT -->
+    <!-- <div class="game-mode-select">
+      <h1>Select game mode:</h1>
+      <button id="normal">Rock, Paper, Scissors</button>
+      <button id="hard">Rock, Paper, Scissors, Lizard, Spock</button>
+    </div> -->
+
+    <!-- SCORE -->
+    <div class="top-bar">
+      <div class="score-container">
+        <div class="game-mode-title">
+          <img src="./images/logo.svg" alt="Rock Paper Scissors">
+        </div>
+        <div class="score-box">
+          <h2>SCORE</h2>
+          <div id="score">0</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game -->
+    <div class="main-game-container">
+      <div id="game-step-1">
+        <img class="game-triangle" src="./images/bg-triangle.svg" alt="">
+        <div id="paper" class="game-bg-border paper" onclick="selectPaper()">
+          <div class="game-button-bg">
+            <img src="./images/icon-paper.svg" alt="">
+          </div>
+        </div>
+        <div id="scissors" class="game-bg-border scissors" onclick="selectScissors()">
+          <div class="game-button-bg">
+            <img src="./images/icon-scissors.svg" alt="">
+          </div>
+        </div>
+        <div id="rock" class="game-bg-border rock" onclick="selectRock()">
+          <div class="game-button-bg">
+            <img src="./images/icon-rock.svg" alt="">
+          </div>
+        </div>
+      </div>
+      <!-- step 2 (picking a move) -->
+      <div id="selection-card">
+        <div class="player-side">
+          <p>YOU PICKED</p>
+          <div class="player-selection">
+            <div id="win-background">
+              <div class="rad1"></div>
+              <div class="rad2"></div>
+              <div class="rad3"></div>
+            </div>
+          </div>
+        </div>
+        <div class="house-side">
+          <p>THE HOUSE PICKED</p>
+          <div class="house-selection"></div>
+        </div>
+      </div>
+    </div>
+    <!-- game result div -->
+    <div class="game-result">
+      <h1 id="result"></h1>
+      <p id="play-again" onclick="playGameAgain()">PLAY AGAIN</p>
+    </div>
+    <!-- RULES -->
+    <div id="rules">
+      <p>RULES</p>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h1>RULES</h1>
+        <img src="./images/image-rules.svg" alt="">
+      </div>
+
+    </div>
+  </main>
+</body>
+
+</html>
