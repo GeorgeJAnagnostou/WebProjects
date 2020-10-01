@@ -18,7 +18,7 @@ a {
     --whiteish-text: rgb(238, 238, 238);
     --text-color: rgb(87, 87, 87);
     --accent-color: rgb(136, 158, 255);
-    --accent-color-o: rgba(136, 158, 255, 0.658);
+    --accent-color-o: rgba(136, 158, 255, 0.568);
     --complement-color: rgba(255, 234, 138, 0.322);
 }
 
@@ -140,10 +140,11 @@ nav a:hover {
 -----card 1-----
 ----------------*/
 .card-1 {
-    background-image: url(https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80);
+    background-image: url(./CV-images/DSC_0577.jpg);
     background-position: center center;
     background-repeat: no-repeat;
-    background-color: var(--accent-color-o);
+    background-size: cover;
+    background-color: rgba(136, 136, 136, 0.5);
     background-blend-mode: multiply;
     height: 100vh;
     display: flex;
@@ -152,35 +153,31 @@ nav a:hover {
 }
 
 .text-container {
-    margin-top: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
-    background-color: rgba(128, 128, 128, 0.411);
     color: white;
     padding: 20px 0 50px;
 }
 
 .title-heading {
-    font-size: 3rem;
-}
-
-.title-location {
-    margin-top: -35px;
-    font-size: 1.2rem;
+    font-size: 6.5rem;
+    width: 80%;
+    line-height: 6rem;
+    text-shadow: 5px 5px 10px black;
 }
 
 .title-text {
     width: 70%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.5rem;
 }
 
 .view-more {
-    margin-top: 50px;
+    margin-top: 15px;
     background-color: var(--accent-color);
     padding: 1rem;
     font-size: .8rem;
@@ -212,18 +209,34 @@ nav a:hover {
     background-size: cover;
     text-align: center;
     display: flex;
-    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: var(--text-color);
 }
 
-.pretext {
-    font-size: 1.2rem;
+.card-2-right {
+    width: 100%;
 }
 
-.cheers-image::before {
+.card-2-left {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pretext {
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+.pretext b {
+    font-size: 1.7rem;
+}
+
+/* .cheers-image::before {
     background-color: var(--text-color);
     height: 2px;
     width: 100px;
@@ -241,21 +254,28 @@ nav a:hover {
     text-align: center;
     bottom: -20px;
     left: 0;
-}
+} */
 
 .cheers-image {
     height: fit-content;
+    width: fit-content;
+    margin: auto;
     padding-bottom: 10px;
     position: relative;
 }
 
 .cheers-image img {
-    height: 130px;
+    height: 50vh;
+    border-radius: 5px;
+    border: 5px solid var(--accent-color-o);
 }
 
-.card-2 p {
-    font-size: 1.1rem;
-    line-height: 1.4rem;
+.card-2-left p {
+    line-height: 1.6rem;
+}
+
+.card-2-left h1 {
+    font-size: 3rem;
 }
 
 /* --------------
@@ -282,15 +302,17 @@ nav a:hover {
 }
 
 .feature h3 {
-    color: rgb(78, 78, 78);
+    color: rgb(37, 37, 37);
+    font-size: 1.8rem;
+
 }
 
 .feature p {
-    margin: 20px 20px;
+    margin: 0 20px;
     font-size: 1.1rem;
     font-weight: 600;
     line-height: 1.3rem;
-    color: rgb(56, 56, 56);
+    color: rgb(54, 54, 54);
 }
 
 .sanitized {
@@ -557,9 +579,8 @@ nav a:hover {
     /* -------------
     -----card-1-----
     ---------------- */
-    .card-1 {
-        background-image: url(https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80);
-        background-size: cover;
+    .title-heading {
+        font-size: 11vw;
     }
 
     /* -------------
@@ -567,11 +588,32 @@ nav a:hover {
     ---------------- */
     .card-2 {
         background-image: url(./CV-images/bg-header-desktop.png);
+        flex-direction: row;
+        justify-content: space-around;
     }
 
-    .card-2 h1,
-    .card-2 p {
-        width: 50%;
+    .card-2-right {
+        width: fit-content;
+        margin-right: 10%;
+    }
+
+    .card-2-left {
+        margin-right: 5%;
+        width: 40%;
+        text-align: right;
+    }
+
+    .pretext {
+        font-size: 2rem;
+    }
+
+    .pretext b {
+        font-size: 2.2rem;
+    }
+
+    .cheers-image img {
+        height: 35vw;
+        min-height: 500px;
     }
 
     /* ---------------
