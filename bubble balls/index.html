@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snake Game</title>
+    <title>BUBBLE BALLZ.io</title>
 
     <style type="text/css">
         * {
@@ -17,6 +17,19 @@
         canvas {
             background-color: #333;
         }
+        .points{
+            z-index: 99;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 45%;
+            padding: 10px;
+            text-align: center;
+            border: 8px solid teal;
+            border-radius: 5px;
+            background-color: rgba(0, 128, 128, 0.37);
+            cursor: default;
+        }
     </style>
 
 </head>
@@ -25,7 +38,9 @@
 
     <canvas id="game-area"></canvas>
     <script src="./game.js" type="text/javascript"></script>
-
+    <!-- <div class="points">
+        <h1>Points: <p id="points">0</p></h1>
+    </div> -->
 </body>
 
 </html>
