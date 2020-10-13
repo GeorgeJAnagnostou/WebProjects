@@ -1,55 +1,40 @@
-body,html {
+/* overflow-x: hidden; */
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
     width: 100vw;
-    height: 100vh;
+    box-sizing: border-box;
 }
 
 .main-onload {
-    margin: 50px auto 50px auto;
-    text-align: center;
-    width: 70%;
+    margin: auto;
+    width: 50%;
+    height: 300px;
     background-color: rgb(89, 161, 194);
-    border: 1px solid black;
     box-shadow: 2px 2px 10px grey;
-    padding-top: 20px;
+    font-size: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .main-bar {
     margin: 0 auto 50px;
     background-color: rgb(89, 161, 194);
-    border: 1px solid black;
     box-shadow: 5px 5px 20px grey;
-    width: 50%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-}
-
-h1 {
-    font-family: Montserrat;
-    font-size: 32px;
-    font-weight: 300;
-    letter-spacing: 1.1px;
-    text-align: center;
-    color: #ffffff;
-}
-
-h3 {
-    font-family: Work Sans;
-    font-weight: 500;
-    line-height: 1.29;
-    color: #27c19e;
-    padding-left: 5px
-}
-
-p {
-    font-family: Work Sans;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.36;
-    text-align: left;
-    color: #4a4a4a;
-    padding-left: 5px;
+    color: white;
+    font-size: 30px;
 }
 
 form {
@@ -57,81 +42,15 @@ form {
     height: 70px;
 }
 
-.container {
-    visibility: hidden;
-    width: 100%;
-    border: 1px solid red;
-}
-
-.weather {
-    width: 200px;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    background-color: rgb(156, 196, 243);
-}
-
-#venues {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    min-height: 250px;
-}
-
-.venue {
-    width: 300px;
-    padding: 20px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    background-color: rgb(156, 196, 243);
-}
-
-.venueimage {
-    margin-top: 100px;
-}
-
-#venues h2 {
-    font-family: Work Sans;
-    font-size: 22px;
-    font-weight: 600;
-    text-align: center;
-    padding-top: 5px;
-}
-
-#destination {
-    font-family: Montserrat;
-    font-size: 30px;
-    font-weight: 600;
-    letter-spacing: 0.9px;
-    text-align: left;
-    color: #27b7c1;
-}
-
-.sectiontitle {
-    width: 300px;
-    align-items: center;
-}
-
-.sectiontitle h2 {
-    font-family: Montserrat;
-    font-size: 22px;
-    font-weight: 300;
-    letter-spacing: 3.4px;
-    text-align: left;
-    color: #4a4a4a;
-}
-
-
 #city {
-    width: 200x;
-    height: 40px;
-    border-radius: 4px;
+    height: 30px;
+    border-radius: 2px;
     border: solid 2.5px #ffffff;
     background-color: inherit;
     opacity: 0.73;
     font-family: Source Sans Pro;
     font-size: 18px;
     letter-spacing: 0.4px;
-    text-align: left;
     color: #ffffff;
 }
 
@@ -148,48 +67,84 @@ form {
     color: #ffffff;
 }
 
+#destination {
+    font-family: Montserrat;
+    font-size: 50px;
+    font-weight: 600;
+    color: #27b7c1;
+    margin-bottom: 10px;
+}
+
+.container {
+    visibility: hidden;
+    width: 70%;
+    margin: auto;
+    position: relative;
+}
+
+.top-card {
+    float: right;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.sectiontitle {
+    font-family: Montserrat;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.weather-card {
+    width: 335px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 10px;
+    padding-right: 15px;
+}
+
+.weather {
+    text-align: right;
+    font-size: 25px;
+    font-family: Source Sans Pro;
+}
+
+#venues {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid red;
+    width: fit-content;
+}
+
+.venue {
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: rgb(156, 196, 243);
+}
+
+#venues h2 {
+    font-family: Work Sans;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 5px;
+}
+
 #map {
-    height: 300px;
-    width: 500px;
+    height: 200px;
+    width: 350px;
     border: 1px solid black;
 }
 
-@media (max-width: 860px) {
-    h1 {
-        padding-top: 80px;
-        font-size: 32px;
-    }
-
-    form {
-        margin-top: 30px;
-        padding-bottom: 10px;
-    }
-
-    #venues,
-    #weather {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .venue,
-    .weather {
-        margin: 10px auto;
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        align-items: center;
-    }
-
-    .weather {
-        padding: 10px 20px;
-        height: 100%;
-    }
-
-    .sectiontitle,
-    .sectiontitle h2,
-    #destination {
-        margin: auto;
-        text-align: center;
-    }
-}
+@media (max-width: 860px) {}

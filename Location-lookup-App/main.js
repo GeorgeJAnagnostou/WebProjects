@@ -10,7 +10,7 @@ const weatherUrl = 'https://api.openweathermap.org/data/2.5/weather';
 // TomTom API Info
 let locationCoord = {};
 const tomtomKey = 'Fql1hjnrcBxcIGAHBjAjBfGeZyEEfMAg';
-const tomtomUrl = 'https://api.tomtom.com/map/1/staticimage?layer=basic&style=main&format=jpeg&zoom=11&center=';
+const tomtomUrl = 'https://api.tomtom.com/map/1/staticimage?layer=basic&style=main&format=jpeg&zoom=9&center=';
 ;
 // Page Elements
 const $input = $('#city');
@@ -21,7 +21,7 @@ const $venueDivs = [$("#venue1"), $("#venue2"), $("#venue3"), $("#venue4")];
 const $weatherDiv = $("#weather1");
 const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const $map = $('#map');
-const $main = $('main');
+const $main = $('#main');
 
 // Add AJAX functions here:
 
@@ -60,13 +60,10 @@ const getForecast = async () => {
 }
 
 const getMap = async () => {
-    const urlToFetch = `${tomtomUrl}${locationCoord.lon}%2C${locationCoord.lat}&width=500&height=300&view=Unified&key=${tomtomKey}`;
-    console.log(locationCoord);
-
+    const urlToFetch = `${tomtomUrl}${locationCoord.lon}%2C${locationCoord.lat}&width=350&height=200&view=Unified&key=${tomtomKey}`;
     try {
         const response = await fetch(urlToFetch);
         if (response.ok) {
-            console.log(response);
             return response.url;
         } else {
             throw new Error('Request failed for getMap');
@@ -126,6 +123,7 @@ const executeSearch = () => {
     $weatherDiv.empty();
     $destination.empty();
     $map.empty();
+    $('.main-onload').addClass('main-bar').removeClass('main-onload');
     $container.css("visibility", "visible");
     getVenues().then(venues => renderVenues(venues));
     getForecast().then(forecast => renderForecast(forecast));

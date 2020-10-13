@@ -4,49 +4,49 @@
 <head>
     <meta charset="utf-8">
     <title>Wanderlust</title>
-    <!-- <link rel="stylesheet" type="text/css" href="./reset.css" /> -->
+    <link rel="stylesheet" type="text/css" href="./reset.css" />
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Work+Sans" rel="stylesheet">
 </head>
 
 <body>
-    <main class="main-bar">
-        <!-- I want this to be able to display the location in a modern design way.
- Clean layout with a color matching map and data -->
+    <main id="main" class="main-onload">
         <h1>Enter a destination</h1>
         <form autocomplete="off">
             <input type="text" id="city">
-            <button id="button" type="submit">Submit</button>
+            <button id="button" type="submit">Search</button>
         </form>
     </main>
     <div class="container">
         <div id="destination"></div>
 
-        <div class="weather-card">
-            <div class="sectiontitle">
-                <h2>CURRENT WEATHER</h2>
-            </div>
-
-            <section id="weather">
-
-                <div class="weather" id="weather1">
-                    <!-- <h2>${weekDays[(new Date()).getDay()]}</h2>
-                    <h2>Temperature: ${kelvinToFahrenheit(currentDay.main.temp)}&deg;F</h2>
-                    <h2>Condition: ${currentDay.weather[0].description}</h2>
-                    <img src="https://openweathermap.org/img/wn/${currentDay.weather[0].icon}@2x.png"> -->
+        <div class="top-card">
+            <section id="map" class="map"></section>
+            <div class="weather-card">
+                <div class="sectiontitle">
+                    <h2>CURRENT WEATHER</h2>
                 </div>
 
-            </section>
-        </div>
+                <section id="weather">
 
-        <section id="map" class="map"></section>
+                    <div class="weather" id="weather1">
+                        <!-- <h2>${weekDays[(new Date()).getDay()]}</h2>
+                        <h2>Temperature: ${kelvinToFahrenheit(currentDay.main.temp)}&deg;F</h2>
+                        <h2>Condition: ${currentDay.weather[0].description}</h2>
+                        <img src="https://openweathermap.org/img/wn/${currentDay.weather[0].icon}@2x.png"> -->
+                    </div>
 
-        <div class="sectiontitle">
-            <h2>TOP ATTRACTIONS</h2>
+                </section>
+            </div>
+
         </div>
 
         <section id="venues">
+
+            <div class="sectiontitle attractions">
+                <h2>LOCAL ATTRACTIONS</h2>
+            </div>
             <div class="venue" id="venue1">
                 <!-- <h2>${name}</h2>
                 <img class="venueimage" src="${iconSource}"/>
